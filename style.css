@@ -1,38 +1,50 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
 :root {
-    --btn-bg: linear-gradient(to right,olivedrab,orange,gold);
+    --btn-bg: linear-gradient(to right, olivedrab, orange, gold);
     --btn-border: darkcyan;
 }
-.container{
+
+.container {
     height: 100%;
     width: 100%;
-    background-image: url(./images/minecraft.jpg);
+    background-image: url(./images/library.jpg);
     position: absolute;
     background-position: center;
 }
-.formContainer{
+
+h4 {
+    font-family:'Courier New', Courier, monospace;
+    color: darkolivegreen;
+    padding: 0 10px;
+    border-top: 1px solid olive;
+    border-bottom: 1px solid olive;
+}
+
+.formContainer {
     width: 380px;
-    height: 460px;
+    height: 640px;
     position: relative;
     margin: 6% auto;
-    background: whitesmoke;
+    background: rgba(245, 245, 245, 0.8);
     padding: 5px;
     border-radius: 50px;
     overflow: hidden;
 }
-.buttonGroup{
+
+.buttonGroup {
     width: 210px;
     margin: 34px auto;
     position: relative;
     box-shadow: 0 0 20px 9px var(--btn-border);
     border-radius: 30px;
 }
-.toggle_btn{
+
+.toggle_btn {
     padding: 10px 25px;
     background: transparent;
     border: 0;
@@ -40,7 +52,8 @@
     position: relative;
     cursor: pointer;
 }
-#btn{
+
+#btn {
     top: 0;
     left: 0;
     position: absolute;
@@ -48,13 +61,16 @@
     height: 100%;
     background: var(--btn-bg);
     border-radius: 30px;
+    box-shadow: 0 0 10px 2px olive;
     transition: .5s;
 }
-.icons{
+
+.icons {
     margin: 30px auto;
     text-align: center;
 }
-.icons img{
+
+.icons img {
     width: 35px;
     margin: 0 12px;
     padding: 5px 5px;
@@ -62,13 +78,15 @@
     box-shadow: 0 0 10px 2px olivedrab;
     border-radius: 30px;
 }
-.formGroup{
+
+.formGroup {
     top: 180px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
-.inputArea{
+
+.inputArea {
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
@@ -77,16 +95,19 @@
     outline: none;
     background: transparent;
 }
-.checkBox{
+
+.checkBox {
     margin: 30px 10px 30px 0;
 }
-span{
-    color: rgb(36,21,22);
+
+span {
+    color: rgb(36, 21, 22);
     font-size: 14px;
     bottom: 65px;
     position: absolute;
 }
-.submit_btn{
+
+.submit_btn {
     width: 80%;
     padding: 10px 30px;
     cursor: pointer;
@@ -98,9 +119,11 @@ span{
     border: 0;
     outline: none;
 }
-#login{
+
+#login {
     left: 50px;
 }
-#register{
+
+#register {
     left: 500px;
 }

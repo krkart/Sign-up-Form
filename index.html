@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,14 @@
     <title>Login/Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="formContainer">
             <div class="buttonGroup">
                 <div id="btn"></div>
-                <button type="button" class="toggle_btn" onclick="login()">SIGN IN</button>
                 <button type="button" class="toggle_btn" onclick="register()">SIGN UP</button>
+                <button type="button" class="toggle_btn" onclick="login()">SIGN IN</button>
             </div>
             <div class="icons">
                 <img src="./icons/fb.png">
@@ -21,16 +23,25 @@
                 <img src="./icons/insta.png">
                 <img src="./icons/youtube.png">
             </div>
-            <form action="" id="login" class="formGroup">
+            <form action="" id="register" class="formGroup">
+                <h4 class="note"><br>
+                    Dear Member, <br><br>Welcome back! Please return or renew the book(s) in 14 days from the date you borrowed. You can borrow upto 3 books at the same time and renew them upto 2 times. Happy Reading!
+                    <br><br>
+                </h4>
+                <br>
                 <input type="text" class="inputArea" placeholder="User Name" required>
                 <input type="text" class="inputArea" placeholder="Password" required>
                 <input type="checkbox" class="checkBox"><span>Remember Password</span>
                 <button type="submit" class="submit_btn">LOG IN</button>
             </form>
-            <form action="" id="register" class="formGroup">
+            <form action="" id="login" class="formGroup">
+                <input type="text" class="inputArea" placeholder="First Name" required>
+                <input type="text" class="inputArea" placeholder="Last Name" required>
+                <input type="email" class="inputArea" placeholder="Email ID" required>
+                <input type="tel" class="inputArea" placeholder="Phone Number" required>
                 <input type="text" class="inputArea" placeholder="User Name" required>
-                <input type="text" class="inputArea" placeholder="Email ID" required>
-                <input type="text" class="inputArea" placeholder="Password" required>
+                <input type="password" class="inputArea" placeholder="Password" required>
+                <input type="password" class="inputArea" placeholder="Confirm Password" required>
                 <input type="checkbox" class="checkBox"><span>I agree to the terms & conditions</span>
                 <button type="submit" class="submit_btn">REGISTER</button>
             </form>
@@ -38,4 +49,5 @@
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
