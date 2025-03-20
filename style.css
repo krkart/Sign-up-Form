@@ -10,24 +10,76 @@
 }
 
 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
     width: 100%;
-    background-image: url(./images/library.jpg);
     position: absolute;
-    background-position: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./images/library.jpg');
+    background-position: center top;
+    overflow: hidden; /*if you want to crop the image*/
+}
+
+h1, h2, h4 {
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h4 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+}
+
+h5 {
     font-family:'Courier New', Courier, monospace;
     color: darkolivegreen;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6% auto;
+    padding: 5px;
+    width: 620px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.subtitle {
+    letter-spacing: 0.7rem;
+    margin-bottom: 50px;
+}
+
+.quote {
+    margin: 10px auto;
     padding: 0 10px;
-    border-top: 1px solid olive;
-    border-bottom: 1px solid olive;
+    width:100%;
+    letter-spacing: 0.3rem;
+    line-height: 2;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
 }
 
 .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
     width: 380px;
-    height: 640px;
+    height: 600px;
     position: relative;
     margin: 6% auto;
     background: rgba(245, 245, 245, 0.8);
@@ -66,7 +118,7 @@ h4 {
 }
 
 .icons {
-    margin: 30px auto;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -77,6 +129,13 @@ h4 {
     cursor: pointer;
     box-shadow: 0 0 10px 2px olivedrab;
     border-radius: 30px;
+}
+
+.note {
+    margin: 10px auto;
+    padding: 0 10px;
+    border-top: 1px solid olive;
+    border-bottom: 1px solid olive;
 }
 
 .formGroup {
@@ -95,6 +154,12 @@ h4 {
     outline: none;
     background: transparent;
 }
+
+#name, #pwd {
+    width: 49%;
+}
+
+
 
 .checkBox {
     margin: 30px 10px 30px 0;

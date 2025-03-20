@@ -11,6 +11,19 @@
 
 <body>
     <div class="container">
+        <div class="header">
+            <div class="title">
+                <img alt="Odin Logo" class="logo" src="./icons/odin-icon.svg">
+                <h1 class="logo-title">ODIN</h1>
+            </div>
+            <h2 class="subtitle">OPEN COMMUNITY LIBRARY</h2>
+            <h4 class="quote"><br>
+                "Bad libraries build collections, good libraries build services, great libraries build communities."
+                <br><br>
+                R. David Lankes
+                <br><br>
+            </h4>
+        </div>
         <div class="formContainer">
             <div class="buttonGroup">
                 <div id="btn"></div>
@@ -24,10 +37,10 @@
                 <img src="./icons/youtube.png">
             </div>
             <form action="" id="register" class="formGroup">
-                <h4 class="note"><br>
+                <h5 class="note"><br>
                     Dear Member, <br><br>Welcome back! Please return or renew the book(s) in 14 days from the date you borrowed. You can borrow upto 3 books at the same time and renew them upto 2 times. Happy Reading!
                     <br><br>
-                </h4>
+                </h5>
                 <br>
                 <input type="text" class="inputArea" placeholder="User Name" required>
                 <input type="text" class="inputArea" placeholder="Password" required>
@@ -35,13 +48,13 @@
                 <button type="submit" class="submit_btn">LOG IN</button>
             </form>
             <form action="" id="login" class="formGroup">
-                <input type="text" class="inputArea" placeholder="First Name" required>
-                <input type="text" class="inputArea" placeholder="Last Name" required>
+                <input type="text" class="inputArea" id='name' placeholder="First Name" required>
+                <input type="text" class="inputArea" id='name' placeholder="Last Name" required>
                 <input type="email" class="inputArea" placeholder="Email ID" required>
                 <input type="tel" class="inputArea" placeholder="Phone Number" required>
                 <input type="text" class="inputArea" placeholder="User Name" required>
-                <input type="password" class="inputArea" placeholder="Password" required>
-                <input type="password" class="inputArea" placeholder="Confirm Password" required>
+                <input type="password" class="inputArea" id='pwd' placeholder="Password" required>
+                <input type="password" class="inputArea" id='pwd' placeholder="Confirm Password" required>
                 <input type="checkbox" class="checkBox"><span>I agree to the terms & conditions</span>
                 <button type="submit" class="submit_btn">REGISTER</button>
             </form>
