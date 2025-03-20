@@ -1,194 +1,192 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 :root {
-    --btn-bg: linear-gradient(to right, olivedrab, orange, gold);
-    --btn-border: darkcyan;
+  --btn-bg: linear-gradient(to right, olivedrab, orange, gold);
+  --btn-border: darkcyan;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./images/library.jpg');
-    background-position: center top;
-    overflow: hidden; /*if you want to crop the image*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./images/library.jpg');
+  background-position: center top;
+  overflow: hidden; /*if you want to crop the image*/
 }
 
 h1, h2, h4 {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 h1 {
-    font-size: 4rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 4rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h4 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: italic;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
 }
 
 h5 {
-    font-family:'Courier New', Courier, monospace;
-    color: darkolivegreen;
+  font-family:'Courier New', Courier, monospace;
+  color: darkolivegreen;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 6% auto;
-    padding: 5px;
-    width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6% auto;
+  padding: 5px;
+  width: 620px;
 }
 
 .title {
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    justify-content: space-around;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .subtitle {
-    letter-spacing: 0.7rem;
-    margin-bottom: 50px;
+  letter-spacing: 0.7rem;
+  margin-bottom: 50px;
 }
 
 .quote {
-    margin: 10px auto;
-    padding: 0 10px;
-    width:100%;
-    letter-spacing: 0.3rem;
-    line-height: 2;
-    border-top: 1px solid whitesmoke;
-    border-bottom: 1px solid whitesmoke;
+  margin: 10px auto;
+  padding: 0 10px;
+  width:100%;
+  letter-spacing: 0.3rem;
+  line-height: 2;
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
 }
 
 .formContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    align-content: stretch;
-    width: 380px;
-    height: 600px;
-    position: relative;
-    margin: 6% auto;
-    background: rgba(245, 245, 245, 0.8);
-    padding: 5px;
-    border-radius: 50px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  width: 380px;
+  height: 600px;
+  position: relative;
+  margin: 6% auto;
+  background: rgba(245, 245, 245, 0.8);
+  padding: 5px;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .buttonGroup {
-    width: 210px;
-    margin: 34px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px var(--btn-border);
-    border-radius: 30px;
+  width: 210px;
+  margin: 34px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px var(--btn-border);
+  border-radius: 30px;
 }
 
 .toggle_btn {
-    padding: 10px 25px;
-    background: transparent;
-    border: 0;
-    outline: none;
-    position: relative;
-    cursor: pointer;
+  padding: 10px 25px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  cursor: pointer;
 }
 
 #btn {
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    background: var(--btn-bg);
-    border-radius: 30px;
-    box-shadow: 0 0 10px 2px olive;
-    transition: .5s;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: var(--btn-bg);
+  border-radius: 30px;
+  box-shadow: 0 0 10px 2px olive;
+  transition: .5s;
 }
 
 .icons {
-    margin: 10px auto;
-    text-align: center;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .icons img {
-    width: 35px;
-    margin: 0 12px;
-    padding: 5px 5px;
-    cursor: pointer;
-    box-shadow: 0 0 10px 2px olivedrab;
-    border-radius: 30px;
+  width: 35px;
+  margin: 0 12px;
+  padding: 5px 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px olivedrab;
+  border-radius: 30px;
 }
 
 .note {
-    margin: 10px auto;
-    padding: 0 10px;
-    border-top: 1px solid olive;
-    border-bottom: 1px solid olive;
+  margin: 10px auto;
+  padding: 0 10px;
+  border-top: 1px solid olive;
+  border-bottom: 1px solid olive;
 }
 
 .formGroup {
-    top: 180px;
-    position: absolute;
-    width: 280px;
-    transition: .5s;
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
 }
 
 .inputArea {
-    width: 100%;
-    padding: 10px 0;
-    margin: 5px 0;
-    border: 0;
-    border-bottom: 1px solid olive;
-    outline: none;
-    background: transparent;
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 1px solid olive;
+  outline: none;
+  background: transparent;
 }
 
 #name, #pwd {
-    width: 49%;
+  width: 49%;
 }
 
-
-
 .checkBox {
-    margin: 30px 10px 30px 0;
+  margin: 30px 10px 30px 0;
 }
 
 span {
-    color: rgb(36, 21, 22);
-    font-size: 14px;
-    bottom: 65px;
-    position: absolute;
+  color: rgb(36, 21, 22);
+  font-size: 14px;
+  bottom: 65px;
+  position: absolute;
 }
 
 .submit_btn {
-    width: 80%;
-    padding: 10px 30px;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    background: var(--btn-bg);
-    box-shadow: 0 0 20px 9px var(--btn-border);
-    border-radius: 30px;
-    border: 0;
-    outline: none;
+  width: 80%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: var(--btn-bg);
+  box-shadow: 0 0 20px 9px var(--btn-border);
+  border-radius: 30px;
+  border: 0;
+  outline: none;
 }
 
 #login {
-    left: 50px;
+  left: 50px;
 }
 
 #register {
-    left: 500px;
+  left: 500px;
 }
