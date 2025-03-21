@@ -7,6 +7,8 @@
 :root {
   --btn-bg: linear-gradient(to right, olivedrab, orange, gold);
   --btn-border: darkcyan;
+  font-family: monospace;
+  font-weight: 500;
 }
 
 .container {
@@ -27,8 +29,8 @@ h1, h2, h4 {
 }
 
 h1 {
-  font-size: 4rem;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 5.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h4 {
@@ -38,7 +40,7 @@ h4 {
 
 h5 {
   font-family:'Courier New', Courier, monospace;
-  color: darkolivegreen;
+  color: brown;
 }
 
 .header {
@@ -53,7 +55,7 @@ h5 {
 .title {
   display: flex;
   flex-direction: row;
-  width: 30%;
+  width: 36%;
   justify-content: space-around;
   margin-bottom: 50px;
 }
@@ -78,7 +80,7 @@ h5 {
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
-  width: 380px;
+  width: 400px;
   height: 600px;
   position: relative;
   margin: 6% auto;
@@ -92,7 +94,7 @@ h5 {
   width: 210px;
   margin: 34px auto;
   position: relative;
-  box-shadow: 0 0 20px 9px var(--btn-border);
+  box-shadow: 0 0 15px 7px var(--btn-border);
   border-radius: 30px;
 }
 
@@ -127,40 +129,61 @@ h5 {
   margin: 0 12px;
   padding: 5px 5px;
   cursor: pointer;
-  box-shadow: 0 0 10px 2px olivedrab;
+  box-shadow: 0 0 10px 2px darkcyan;
   border-radius: 30px;
 }
 
 .note {
-  margin: 10px auto;
+  margin: 5px auto;
   padding: 0 10px;
-  border-top: 1px solid olive;
-  border-bottom: 1px solid olive;
+  border-top: 1px solid brown;
+  border-bottom: 1px solid brown;
 }
 
 .formGroup {
   top: 180px;
   position: absolute;
-  width: 280px;
+  width: 310px;
   transition: .5s;
 }
 
 .inputArea {
+  float: left;
+  position: relative;
   width: 100%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border: 0;
-  border-bottom: 1px solid olive;
+  padding: 0.7rem 0 0.7rem 0.7rem;
+  margin: 0.5rem 0;
+  border: 0.2rem solid black;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  box-shadow: 0.2rem 0.4rem 0 gray;
   outline: none;
   background: transparent;
+  font-weight: 600;
 }
 
-#name, #pwd {
-  width: 49%;
+.name, .pwd {
+  width: 48%;
 }
 
-.checkBox {
+input:invalid::placeholder:after {
+  color: lightcoral;
+}
+
+input:focus {
+  box-shadow: 0.3rem 0.6rem 0 gray;
+}
+
+input:invalid::after {
+  border: 0.2rem solid red;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  box-shadow: 0.2rem 0.4rem 0 lightcoral;
+}
+
+.checkBox, .checkBox:focus {
   margin: 30px 10px 30px 0;
+  box-shadow: none;
 }
 
 span {
@@ -177,16 +200,20 @@ span {
   display: block;
   margin: auto;
   background: var(--btn-bg);
-  box-shadow: 0 0 20px 9px var(--btn-border);
+  box-shadow: 0 0 15px 7px var(--btn-border);
   border-radius: 30px;
   border: 0;
   outline: none;
 }
 
-#login {
-  left: 50px;
+button {
+  font-weight: 600;
 }
 
 #register {
+  left: 50px;
+}
+
+#login {
   left: 500px;
 }

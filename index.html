@@ -36,27 +36,28 @@
         <img src="./icons/insta.png">
         <img src="./icons/youtube.png">
       </div>
-      <form action="" id="register" class="formGroup">
+      <form action="#" method="post" id="register" class="formGroup">
+        <input type="text" name="fname" class="inputArea name" placeholder="First Name" required>
+        <input type="text" name="lname" class="inputArea name" placeholder="Last Name" style='float:right;' required>
+        <input type="email" name="email" class="inputArea" placeholder="Email ID" required>
+        <input type="tel" name="tel" class="inputArea" placeholder="Phone Number" required>
+        <input type="text" name="uname" class="inputArea" placeholder="User Name" required>
+        <input type="password" name="pwd" class="inputArea pwd" placeholder="Password" minlength="8" maxlength="16" required>
+        <input type="password" class="inputArea pwd" placeholder="Confirm Password" style='float:right;' minlength="8" maxlength="16" required>
+        <input type="checkbox" class="checkBox" required><span>I agree to the terms & conditions</span>
+        <button type="submit" class="submit_btn">REGISTER</button>
+      </form>
+      <form action="#" method='post' id="login" class="formGroup">
         <h5 class="note"><br>
-          Dear Member, <br><br>Welcome back! Please return or renew the book(s) in 14 days from the date you borrowed. You can borrow upto 3 books at the same time and renew them upto 2 times. Happy Reading!
+          Dear Member, <br><br>Welcome back! Please return or renew the book(s) in 14 days from the date you borrowed.
+          You can borrow upto 3 books at the same time and renew them upto 2 times. Happy Reading!
           <br><br>
         </h5>
         <br>
-        <input type="text" class="inputArea" placeholder="User Name" required>
-        <input type="text" class="inputArea" placeholder="Password" required>
+        <input type="text" name='uname' class="inputArea" placeholder="User Name" required>
+        <input type="text" name='pwd' class="inputArea" placeholder="Password" required>
         <input type="checkbox" class="checkBox"><span>Remember Password</span>
         <button type="submit" class="submit_btn">LOG IN</button>
-      </form>
-      <form action="" id="login" class="formGroup">
-        <input type="text" class="inputArea" id='name' placeholder="First Name" required>
-        <input type="text" class="inputArea" id='name' placeholder="Last Name" required>
-        <input type="email" class="inputArea" placeholder="Email ID" required>
-        <input type="tel" class="inputArea" placeholder="Phone Number" required>
-        <input type="text" class="inputArea" placeholder="User Name" required>
-        <input type="password" class="inputArea" id='pwd' placeholder="Password" required>
-        <input type="password" class="inputArea" id='pwd' placeholder="Confirm Password" required>
-        <input type="checkbox" class="checkBox"><span>I agree to the terms & conditions</span>
-        <button type="submit" class="submit_btn">REGISTER</button>
       </form>
     </div>
   </div>
