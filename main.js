@@ -1,45 +1,80 @@
+const forms = document.querySelectorAll('form');
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const email = document.getElementById('email');
+const tel = document.getElementById('tel');
+const password = document.getElementById('pwd');
+const password2 = document.getElementById('pwd2');
 
+forms.forEach().addEventListener('submit', e => {
+  e.preventDefault();
 
-let myreg = document.getElementById('register');
-let mylogin = document.getElementById('login');
-let mybtn = document.getElementById('btn');
+  checkInputs();
+});
 
-register = () => {
-  myreg.style.left = '50px';
-  mylogin.style.left = '500px';
-  mybtn.style.left = '0px';
+function setErrorFor(input, message) {
+  const formControl = input.parentElement;
+  const error = formControl.querySelector('small');
+  formControl.classList.add('invalid');
+  error.innerText = message;
+  error.classList.add('show');
 }
 
-login = () => {
-  myreg.style.left = '-450px';
-  mylogin.style.left = '50px';
-  mybtn.style.left = '110px';
+function setSuccessFor(input) {
+  const formControl = input.parentElement;
+  formControl.className = 'form-control success';
 }
 
-const myform = document.querySelectorAll('.inputArea');
-forEach(field in myform).noValidate = true;
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^>()\[\]\\.,;:\s@"]+)*)| (*.+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
 
-const btns = document.querySelectorAll('.submit_btn')
-forEach(btn in btns).addEventListener('submit', validateForm);
+function checkInputs() {
+  // trim to remove the whitespaces
+  const fnameValue = fname.value.trim();
+  const lnameValue = lname.value.trim();
+  const emailValue = email.value.trim();
+  const telValue = tel.value.trim();
+  const passwordValue = password.value.trim();
+  const password2Value = password2.value.trim();
 
-function validateForm(e) {
-  const form = e.target;
-  if (form.checkValidity()) {
-    // form is valid - make further checks
+  if (fnameValue == '') {
+    setErrorFor(fname, 'Cannot be blank');
+  } else {
+    setSuccessFor(fname);
   }
-  else {
-    // form is invalid - cancel submit
-    e.preventDefault();
-    // apply invalid class
-    Array.from(form.elements).forEach(i => {
-      if (i.checkValidity()) {
-        // field is valid - remove class
-        i.parentElement.classList.remove('invalid');
-      }
-      else {
-        // field is invalid - add class
-        i.parentElement.classList.add('invalid');
-      }
-    });
+
+  if (lnameValue == '') {
+    setErrorFor(lname, 'Cannot be blank');
+  } else {
+    setSuccessFor(lname);
   }
-};
+
+  if (emailValue === '') {
+    setErrorFor(email, 'Cannot be blank');
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, 'Not valid');
+  } else {
+    setSuccessFor(email);
+  }
+
+  if (telValue == '') {
+    setErrorFor(tel, 'Cannot be blank');
+  } else {
+    setSuccessFor(tel);
+  }
+
+  if (passwordValue == '') {
+    setErrorFor(password, 'Cannot be blank');
+  } else {
+    setSuccessFor(password);
+  }
+
+  if (password2Value == '') {
+    setErrorFor(password2, 'Cannot be blank');
+  } else if (passwordValue != password2Value) {
+    setErrorFor(password2, 'Does not match');
+  } else {
+    setSuccessFor(password2);
+  }
+}

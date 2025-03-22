@@ -37,13 +37,38 @@
         <img src="./icons/youtube.png">
       </div>
       <form action="#" method="post" id="register" class="formGroup">
-        <input type="text" name="fname" class="inputArea name" placeholder="First Name" required>
-        <input type="text" name="lname" class="inputArea name" placeholder="Last Name" style='float:right;' required>
-        <input type="email" name="email" class="inputArea" placeholder="Email ID" required>
-        <input type="tel" name="tel" class="inputArea" placeholder="Phone Number" required>
-        <input type="text" name="uname" class="inputArea" placeholder="User Name" required>
-        <input type="password" name="pwd" class="inputArea pwd" placeholder="Password" minlength="8" maxlength="16" required>
-        <input type="password" class="inputArea pwd" placeholder="Confirm Password" style='float:right;' minlength="8" maxlength="16" required>
+        <div class="formField name">
+          <label for="fname">First Name:</label><br>
+          <input type="text" id='fname' name="fname" class="inputBox" placeholder="Tom" required>
+          <small>Error Message</small>
+        </div>
+        <div class="formField name" style='float:right;'>
+          <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname" name="lname" class="inputBox" placeholder="Cruise" required>
+          <small>Error Message</small>
+        </div>
+        <div class="formField">
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" class="inputBox" placeholder="tom-cruise@mail.in" required>
+          <small>Error Message</small>
+        </div>
+        <div class="formField">
+          <label for="tel">Phone Number:</label><br>
+          <input type="tel" id="tel" name="tel" class="inputBox" placeholder="5555-6666-77" required>
+          <small>Error Message</small>
+        </div>
+        <div class="formField pwd">
+          <label for="pwd">Password:</label><br>
+          <input type="password" id='pwd' name="pwd" class="inputBox" placeholder="Password" minlength="8"
+            maxlength="16" required>
+          <small>Error Message</small>
+        </div>
+        <div class="formField pwd" style='float:right;'>
+          <label for="pwd2">Confirm Password:</label><br>
+          <input type="password" id="pwd2" class="inputBox" placeholder="Confirm Password" minlength="8" maxlength="16"
+            required>
+          <small>Error Message</small>
+        </div>
         <input type="checkbox" class="checkBox" required><span>I agree to the terms & conditions</span>
         <button type="submit" class="submit_btn">REGISTER</button>
       </form>
@@ -53,15 +78,39 @@
           You can borrow upto 3 books at the same time and renew them upto 2 times. Happy Reading!
           <br><br>
         </h5>
-        <br>
-        <input type="text" name='uname' class="inputArea" placeholder="User Name" required>
-        <input type="text" name='pwd' class="inputArea" placeholder="Password" required>
+        <div class="formField">
+          <label for="email">Email:</label>
+          <input type="email" id='email' name='email' class="inputBox" required>
+          <small class="error hide-error">Error Message</small>
+        </div>
+        <div class="formField">
+          <label for="fname">Password:</label>
+          <input type="text" name='pwd' class="inputBox" required>
+          <small>Error Message</small>
+        </div>
         <input type="checkbox" class="checkBox"><span>Remember Password</span>
         <button type="submit" class="submit_btn">LOG IN</button>
       </form>
     </div>
   </div>
-  <script src="main.js"></script>
+  <script>
+    let myreg = document.getElementById('register');
+    let mylogin = document.getElementById('login');
+    let mybtn = document.getElementById('btn');
+
+    register = () => {
+      myreg.style.left = '50px';
+      mylogin.style.left = '500px';
+      mybtn.style.left = '0px';
+    }
+
+    login = () => {
+      myreg.style.left = '-450px';
+      mylogin.style.left = '50px';
+      mybtn.style.left = '110px';
+    }
+  </script>
+  <script type="text/javascript" src="./main.js" defer></script>
 </body>
 
 </html>

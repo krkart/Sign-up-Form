@@ -39,7 +39,8 @@ h4 {
 }
 
 h5 {
-  font-family:'Courier New', Courier, monospace;
+  font-size: small;
+  font-family: monospace;
   color: brown;
 }
 
@@ -92,9 +93,9 @@ h5 {
 
 .buttonGroup {
   width: 210px;
-  margin: 34px auto;
+  margin: 20px auto;
   position: relative;
-  box-shadow: 0 0 15px 7px var(--btn-border);
+  box-shadow: 0 0 5px 2px var(--btn-border);
   border-radius: 30px;
 }
 
@@ -115,7 +116,7 @@ h5 {
   height: 100%;
   background: var(--btn-bg);
   border-radius: 30px;
-  box-shadow: 0 0 10px 2px olive;
+  box-shadow: 0 0 5px 2px olive;
   transition: .5s;
 }
 
@@ -129,63 +130,84 @@ h5 {
   margin: 0 12px;
   padding: 5px 5px;
   cursor: pointer;
-  box-shadow: 0 0 10px 2px darkcyan;
+  box-shadow: 0 0 5px 2px darkcyan;
   border-radius: 30px;
 }
 
 .note {
-  margin: 5px auto;
+  margin: 20px auto;
   padding: 0 10px;
-  border-top: 1px solid brown;
-  border-bottom: 1px solid brown;
+  border-top: 2px solid brown;
+  border-bottom: 2px solid brown;
 }
 
 .formGroup {
-  top: 180px;
+  top: 150px;
   position: absolute;
   width: 310px;
   transition: .5s;
 }
 
-.inputArea {
-  float: left;
-  position: relative;
+.formField {
   width: 100%;
-  padding: 0.7rem 0 0.7rem 0.7rem;
-  margin: 0.5rem 0;
+  float: left;
+  margin: 0.8rem 0 0;
+}
+
+.formField label {
+  display: inline-block;
+  font-size: smaller;
+  padding-left: 0.9rem;
+}
+
+.formField input {
+  display: block;
+  width: 100%;
+  position: relative;
   border: 0.2rem solid black;
   border-radius: 1.5rem;
   box-sizing: border-box;
-  box-shadow: 0.2rem 0.4rem 0 gray;
+  box-shadow: 0.1rem 0.2rem 0 lightslategray;
+  padding: 0.7rem 0 0.7rem 0.7rem;
   outline: none;
   background: transparent;
-  font-weight: 600;
+}
+
+small {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: red;
+  visibility: hidden;
 }
 
 .name, .pwd {
-  width: 48%;
+  width: 49%;
 }
 
 input:focus {
-  box-shadow: 0.3rem 0.6rem 0 gray;
+  box-shadow: 0.1rem 0.2rem 0 black;
 }
 
-.invalid{
+.invalid {
   border: 0.2rem solid red;
   border-radius: 1.5rem;
   box-sizing: border-box;
   box-shadow: 0.2rem 0.4rem 0 lightcoral;
 }
 
+.show {
+  visibility: visible;
+}
+
 .checkBox, .checkBox:focus {
-  margin: 30px 10px 30px 0;
+  margin: 20px 10px 20px 0;
   box-shadow: none;
 }
 
 span {
   color: rgb(36, 21, 22);
   font-size: 14px;
-  bottom: 65px;
+  bottom: 53px;
   position: absolute;
 }
 
@@ -196,7 +218,7 @@ span {
   display: block;
   margin: auto;
   background: var(--btn-bg);
-  box-shadow: 0 0 15px 7px var(--btn-border);
+  box-shadow: 0 0 5px 2px var(--btn-border);
   border-radius: 30px;
   border: 0;
   outline: none;
