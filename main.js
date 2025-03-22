@@ -5,6 +5,7 @@ const email = document.getElementById('email');
 const tel = document.getElementById('tel');
 const password = document.getElementById('pwd');
 const password2 = document.getElementById('pwd2');
+console.log(fname.parentElement);
 
 forms.forEach().addEventListener('submit', e => {
   e.preventDefault();
@@ -13,9 +14,8 @@ forms.forEach().addEventListener('submit', e => {
 });
 
 function setErrorFor(input, message) {
-  const formControl = input.parentElement;
   const error = formControl.querySelector('small');
-  formControl.classList.add('invalid');
+  input.classList.add('invalid');
   error.innerText = message;
   error.classList.add('show');
 }

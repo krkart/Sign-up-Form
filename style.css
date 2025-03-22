@@ -196,6 +196,7 @@ input:focus {
 }
 
 .show {
+  padding-left: 0.9rem;
   visibility: visible;
 }
 
