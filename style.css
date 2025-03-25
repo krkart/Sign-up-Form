@@ -11,7 +11,7 @@
   font-weight: 500;
 }
 
-.container {
+.landing {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./images/library.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./assets/images/library.jpg');
   background-position: center top;
   overflow: hidden; /*if you want to crop the image*/
 }
@@ -141,63 +141,64 @@ h5 {
   border-bottom: 2px solid brown;
 }
 
-.formGroup {
+form {
   top: 150px;
   position: absolute;
   width: 310px;
   transition: .5s;
 }
 
-.formField {
+.form-control {
   width: 100%;
   float: left;
   margin: 0.8rem 0 0;
 }
 
-.formField label {
+.form-control label {
   display: inline-block;
-  font-size: smaller;
+  font-size: 0.95rem;
   padding-left: 0.9rem;
+  letter-spacing: 0.05rem;
 }
 
-.formField input {
+.form-control input {
   display: block;
   width: 100%;
   position: relative;
   border: 0.2rem solid black;
   border-radius: 1.5rem;
   box-sizing: border-box;
-  box-shadow: 0.1rem 0.2rem 0 lightslategray;
+  box-shadow: 0.15rem 0.25rem 0 lightslategray;
   padding: 0.7rem 0 0.7rem 0.7rem;
   outline: none;
   background: transparent;
+  font-size: 1.15rem;
 }
 
-small {
+.form-control input:focus {
+  box-shadow: 0.15rem 0.25rem 0 black;
+}
+
+.form-control small {
   display: inline-block;
   margin-top: 0.3rem;
   color: red;
+  padding-left: 0.9rem;
   visibility: hidden;
 }
 
-.name, .pwd {
+#name, #pw {
   width: 49%;
 }
 
-input:focus {
-  box-shadow: 0.1rem 0.2rem 0 black;
-}
-
-.invalid {
+.inputBox.error {
   border: 0.2rem solid red;
-  border-radius: 1.5rem;
-  box-sizing: border-box;
-  box-shadow: 0.2rem 0.4rem 0 lightcoral;
+  box-shadow: 0.15rem 0.25rem 0 coral;
 }
 
-.show {
-  padding-left: 0.9rem;
-  visibility: visible;
+.inputBox.success {
+  border: 0.2rem solid green;
+  box-shadow: 0.15rem 0.25rem 0 limegreen;
 }
 
 .checkBox, .checkBox:focus {
@@ -212,7 +213,7 @@ span {
   position: absolute;
 }
 
-.submit_btn {
+button[type='submit'] {
   width: 80%;
   padding: 10px 30px;
   cursor: pointer;

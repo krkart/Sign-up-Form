@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login/Registration Form</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/font-awesome.min.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="landing">
     <div class="header">
       <div class="title">
-        <img alt="Odin Logo" class="logo" src="./icons/odin-icon.svg">
+        <img alt="Odin Logo" class="logo" src="./assets/icons/odin-icon.svg">
         <h1 class="logo-title">ODIN</h1>
       </div>
       <h2 class="subtitle">OPEN COMMUNITY LIBRARY</h2>
@@ -31,59 +32,59 @@
         <button type="button" class="toggle_btn" onclick="login()">SIGN IN</button>
       </div>
       <div class="icons">
-        <img src="./icons/fb.png">
-        <img src="./icons/twitter.png">
-        <img src="./icons/insta.png">
-        <img src="./icons/youtube.png">
+        <img src="./assets/icons/fb.png">
+        <img src="./assets/icons/twitter.png">
+        <img src="./assets/icons/insta.png">
+        <img src="./assets/icons/youtube.png">
       </div>
-      <form action="#" method="post" id="register" class="formGroup">
-        <div class="formField name">
+      <form action="#" method="post" id="register">
+        <div class="form-control" id="name">
           <label for="fname">First Name:</label><br>
-          <input type="text" id='fname' name="fname" class="inputBox" placeholder="Tom" required>
+          <input type="text" id='fname' name="fname" class="inputBox" placeholder="Tom">
           <small>Error Message</small>
         </div>
-        <div class="formField name" style='float:right;'>
+        <div class="form-control" id='name' style='float:right;'>
           <label for="lname">Last Name:</label><br>
-          <input type="text" id="lname" name="lname" class="inputBox" placeholder="Cruise" required>
+          <input type="text" id="lname" name="lname" class="inputBox" placeholder="Cruise">
           <small>Error Message</small>
         </div>
-        <div class="formField">
+        <div class="form-control">
           <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" class="inputBox" placeholder="tom-cruise@mail.in" required>
+          <input type="email" id="email" name="email" class="inputBox" placeholder="tom-cruise@mail.in">
           <small>Error Message</small>
         </div>
-        <div class="formField">
+        <div class="form-control">
           <label for="tel">Phone Number:</label><br>
-          <input type="tel" id="tel" name="tel" class="inputBox" placeholder="5555-6666-77" required>
+          <input type="tel" id="tel" name="tel" class="inputBox" placeholder="5555-6666-77">
           <small>Error Message</small>
         </div>
-        <div class="formField pwd">
+        <div class="form-control" id="pw">
           <label for="pwd">Password:</label><br>
-          <input type="password" id='pwd' name="pwd" class="inputBox" placeholder="Password" minlength="8"
-            maxlength="16" required>
+          <input type="password" id='pwd' name="pwd" class="inputBox" placeholder="Mypassword@25" minlength="8"
+            maxlength="16">
           <small>Error Message</small>
         </div>
-        <div class="formField pwd" style='float:right;'>
+        <div class="form-control" id="pw" style='float:right;'>
           <label for="pwd2">Confirm Password:</label><br>
-          <input type="password" id="pwd2" class="inputBox" placeholder="Confirm Password" minlength="8" maxlength="16"
-            required>
+          <input type="password" id="pwd2" class="inputBox" placeholder="Mypassword@25" minlength="8" maxlength="16"
+           >
           <small>Error Message</small>
         </div>
-        <input type="checkbox" class="checkBox" required><span>I agree to the terms & conditions</span>
+        <input type="checkbox" class="checkBox"><span>I agree to the terms & conditions</span>
         <button type="submit" class="submit_btn">REGISTER</button>
       </form>
-      <form action="#" method='post' id="login" class="formGroup">
+      <form action="#" method='post' id="login">
         <h5 class="note"><br>
           Dear Member, <br><br>Welcome back! Please return or renew the book(s) in 14 days from the date you borrowed.
           You can borrow upto 3 books at the same time and renew them upto 2 times. Happy Reading!
           <br><br>
         </h5>
-        <div class="formField">
+        <div class="form-control">
           <label for="useremail">Email:</label>
           <input type="email" id='useremail' name='useremail' class="inputBox" required>
           <small>Error Message</small>
         </div>
-        <div class="formField">
+        <div class="form-control">
           <label for="logpwd">Password:</label>
           <input type="text" id='logpwd' name='logpwd' class="inputBox" required>
           <small>Error Message</small>

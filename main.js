@@ -5,28 +5,37 @@ const email = document.getElementById('email');
 const tel = document.getElementById('tel');
 const password = document.getElementById('pwd');
 const password2 = document.getElementById('pwd2');
-console.log(fname.parentElement);
 
-forms.forEach().addEventListener('submit', e => {
+const regBtn = document.querySelector(".reg-btn");
+const logBtn = document.querySelector(".login-btn");
+
+forms[0].addEventListener('submit', e => {
   e.preventDefault();
 
   checkInputs();
 });
 
 function setErrorFor(input, message) {
-  const error = formControl.querySelector('small');
-  input.classList.add('invalid');
-  error.innerText = message;
-  error.classList.add('show');
+  const small = input.nextElementSibling;
+  input.className = 'inputBox error';
+  small.innerText = message;
+  small.style.visibility = 'visible';
 }
 
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success';
+function setSuccessFor(input, message) {
+  const small = input.nextElementSibling;
+  input.className = 'inputBox success';
+  small.style.color = 'darkgreen';
+  small.innerText = message;
+  small.style.visibility = 'visible';
 }
 
 function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^>()\[\]\\.,;:\s@"]+)*)| (*.+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+  return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
+}
+
+function isPhone(tel) {
+  return /^(([0-9\ \+\_\-\,\.\^\*\?\$\^\#\(\)])|(ext|x)){1,20}$/i.test(tel);
 }
 
 function checkInputs() {
@@ -41,13 +50,13 @@ function checkInputs() {
   if (fnameValue == '') {
     setErrorFor(fname, 'Cannot be blank');
   } else {
-    setSuccessFor(fname);
+    setSuccessFor(fname, 'Looks right');
   }
 
   if (lnameValue == '') {
     setErrorFor(lname, 'Cannot be blank');
   } else {
-    setSuccessFor(lname);
+    setSuccessFor(lname, 'Looks right');
   }
 
   if (emailValue === '') {
@@ -55,19 +64,21 @@ function checkInputs() {
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, 'Not valid');
   } else {
-    setSuccessFor(email);
+    setSuccessFor(email, 'Looks right');
   }
 
   if (telValue == '') {
     setErrorFor(tel, 'Cannot be blank');
+  } else if (!isPhone(telValue)) {
+    setErrorFor(tel, 'Not valid');
   } else {
-    setSuccessFor(tel);
+    setSuccessFor(tel, 'Looks right');
   }
 
   if (passwordValue == '') {
     setErrorFor(password, 'Cannot be blank');
   } else {
-    setSuccessFor(password);
+    setSuccessFor(password, 'Looks right');
   }
 
   if (password2Value == '') {
@@ -75,6 +86,6 @@ function checkInputs() {
   } else if (passwordValue != password2Value) {
     setErrorFor(password2, 'Does not match');
   } else {
-    setSuccessFor(password2);
+    setSuccessFor(password2, 'Looks right');
   }
 }
